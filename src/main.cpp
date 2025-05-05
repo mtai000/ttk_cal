@@ -297,7 +297,7 @@ int main(int argc, char** argv) {
 
 		std::sort(vg.begin(), vg.end(), [](const Gun& a, const Gun& b) {
 			auto calculate_ttk = [](const Gun& g) {
-				return (static_cast<float>(g.count) / max_times - 0.0f) * 60.0f / g.rate_of_fire;
+				return (static_cast<float>(g.count) / max_times - 1) * 60.0f / g.rate_of_fire;
 				};
 			return calculate_ttk(a) < calculate_ttk(b);
 			});
